@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  height: 500px;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.caption {
+  position: absolute;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  transition: all 0.5s;
+}
+
+.caption h2 {
+  text-transform: uppercase;
+}
+
+.caption p {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.container:hover .caption {
+  transform: translateY(0);
+}
+
+.container:hover img {
+  transform: translateY(-30%);
+}
